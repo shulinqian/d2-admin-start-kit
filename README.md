@@ -1,5 +1,5 @@
-[![Build Status](https://www.travis-ci.org/d2-projects/d2-admin-start-kit.svg?branch=master)](https://www.travis-ci.org/d2-projects/d2-admin-start-kit)
+# summer 中控台
+summer 中控台
 
-[D2Admin](https://github.com/d2-projects/d2-admin) simplified version of the start template, delete all the sample code in the full version, retain all core functions.
-
-[Gitee](https://gitee.com/fairyever/d2-admin-start-kit)
+# 前端框架
+<a href="https://github.com/d2-projects/d2-admin" target="_blank"><img src="https://raw.githubusercontent.com/FairyEver/d2-admin/master/doc/image/d2-admin@2x.png" width="200"></a>
