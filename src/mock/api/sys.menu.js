@@ -7,7 +7,7 @@ export default [
         code: 0,
         msg: '',
         data: [
-          { path: '/indexssv/sss', title: '首页666677', icon: 'home' }
+          { path: '/logs/search', title: '日志调试', icon: 'file-code-o' }
         ]
       }
     }

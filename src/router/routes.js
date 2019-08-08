@@ -3,6 +3,17 @@ import layoutHeaderAside from '@/layout/header-aside'
 // 由于懒加载页面太多的话会造成webpack热更新太慢，所以开发环境不使用懒加载，只有生产环境使用懒加载
 const _import = require('@/libs/util.import.' + process.env.NODE_ENV)
 
+
+const req = context => context.keys().map(context)
+const routers = req(require.context('./routers/', true, /\.js$/))
+  .filter(e => e.default)
+  .map(e => e.default)
+
+let routersBuild = []
+routers.forEach(function (value) {
+  routersBuild = [...routersBuild, ...value]
+})
+
 /**
  * 在主框架内显示
  */
@@ -107,5 +118,6 @@ export const frameInRoutes = frameIn
 export default [
   ...frameIn,
   ...frameOut,
-  ...errorPage
+  ...errorPage,
+  ...routersBuild
 ]
