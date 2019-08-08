@@ -22,15 +22,16 @@ new Vue({
   store,
   i18n,
   render: h => h(App),
-  created () {
+  async created () {
     // 处理路由 得到每一级的路由设置
     this.$store.commit('d2admin/page/init', frameInRoutes)
+    let menuHeaders = await menuHeader()
     // 设置顶栏菜单
-    this.$store.commit('d2admin/menu/headerSet', menuHeader)
+    this.$store.commit('d2admin/menu/headerSet', menuHeaders)
     // 设置侧边栏菜单
     this.$store.commit('d2admin/menu/asideSet', menuAside)
     // 初始化菜单搜索功能
-    this.$store.commit('d2admin/search/init', menuHeader)
+    this.$store.commit('d2admin/search/init', menuHeaders)
   },
   mounted () {
     // 展示系统信息

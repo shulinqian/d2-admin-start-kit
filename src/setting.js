@@ -9,7 +9,7 @@ export default {
   },
   // 侧边栏默认折叠状态
   menu: {
-    asideCollapse: false
+    asideCollapse: true
   },
   // 在读取持久化数据失败时默认页面
   page: {
@@ -62,6 +62,6 @@ export default {
   },
   // 是否默认开启页面切换动画
   transition: {
-    active: true
+    active: false
   }
 }
